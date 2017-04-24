@@ -1,12 +1,16 @@
 {
   "name": "hyperbloom-chain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HyperBloom protocol trust chain",
   "main": "lib/chain.js",
   "scripts": {
     "test": "mocha --reporter=spec test/*-test.js"
   },
-  "keywords": [ "hyperbloom", "trust", "chain" ],
+  "keywords": [
+    "hyperbloom",
+    "trust",
+    "chain"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/hyperbloom/hyperbloom-chain.git"
