@@ -1,6 +1,26 @@
-# hyperbloom-chain
+# HyperBloom Chain
 
-**WORK IN PROGRESS/EXPERIMENTAL**
+Implementation of [HyperBloom Trust Chain][0] verifier and link issuer.
+
+## Usage
+
+```js
+const HyperChain = require('hyperbloom-chain');
+
+const chain = new HyperChain({
+  root: rootPublicKey
+});
+
+const link = chain.issueLink({
+  expiration: Date.now() / 1000 + 1e3,
+  publicKey: trusteeKey
+}, privateKey);
+
+const info = chain.parseLink(link);
+
+// NOTE: throws on failure
+chain.verify(links, nonce, sign);
+```
 
 ## LICENSE
 
@@ -26,3 +46,5 @@ NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
 DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+[0]: https://github.com/hyperbloom/hyperbloom-protocol/blob/master/spec.md#signature-chain
