@@ -1,16 +1,20 @@
 {
   "name": "hyperbloom-chain",
   "version": "1.0.0",
-  "description": "",
+  "description": "HyperBloom protocol trust chain",
   "main": "lib/chain.js",
   "scripts": {
     "test": "mocha --reporter=spec test/*-test.js"
   },
-  "keywords": [],
+  "keywords": [ "hyperbloom", "trust", "chain" ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hyperbloom/hyperbloom-chain.git"
+  },
   "author": "Fedor Indutny <fedor@indutny.com> (http://darksi.de/)",
   "license": "MIT",
   "dependencies": {
-    "hyperbloom-constants": "git://github.com/hyperbloom/hyperbloom-constants.git",
+    "hyperbloom-constants": "^1.0.0",
     "sodium-signatures": "^2.0.0",
     "sodium-universal": "^1.0.0"
   },
